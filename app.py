@@ -8,7 +8,7 @@ if "auth" not in st.session_state:
     st.session_state.auth = False
 
 if not st.session_state.auth:
-    st.title("🔐 パスワードを入力してください")
+    st.title("🔐パスワードを入力してください")
 
     pw = st.text_input("パスワード", type="password")
 
