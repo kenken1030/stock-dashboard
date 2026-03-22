@@ -2,7 +2,7 @@ import streamlit as st
 # =========================
 # パスワード認証
 # =========================
-PASSWORD = "1234"  # ←好きなパスワードに変更
+PASSWORD = "stock123"  # ←好きなパスワードに変更
 
 if "auth" not in st.session_state:
     st.session_state.auth = False
