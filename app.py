@@ -1,4 +1,24 @@
 import streamlit as st
+# =========================
+# パスワード認証
+# =========================
+PASSWORD = "1234"  # ←好きなパスワードに変更
+
+if "auth" not in st.session_state:
+    st.session_state.auth = False
+
+if not st.session_state.auth:
+    st.title("🔐 パスワードを入力してください")
+
+    pw = st.text_input("パスワード", type="password")
+
+    if pw == PASSWORD:
+        st.session_state.auth = True
+        st.rerun()
+    elif pw != "":
+        st.error("パスワードが違います")
+
+    st.stop()
 import pandas as pd
 import yfinance as yf
 
